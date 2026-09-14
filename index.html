@@ -9,6 +9,24 @@
   
   <!-- CSS Principal -->
   <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // Detector automático inteligente de caminhos de imagens e vídeos (raiz ou pasta img/)
+    document.addEventListener('error', function(e) {
+      var elem = e.target;
+      if (elem && (elem.tagName === 'IMG' || elem.tagName === 'VIDEO' || elem.tagName === 'SOURCE')) {
+        if (!elem.dataset.retried) {
+          elem.dataset.retried = 'true';
+          var curSrc = elem.getAttribute('src') || '';
+          if (curSrc.startsWith('img/')) {
+            elem.src = curSrc.replace('img/', '');
+          } else if (!curSrc.startsWith('http') && !curSrc.startsWith('/') && !curSrc.startsWith('data:')) {
+            elem.src = 'img/' + curSrc;
+          }
+          if (elem.tagName === 'VIDEO') elem.load();
+        }
+      }
+    }, true);
+  </script>
 </head>
 <body>
 

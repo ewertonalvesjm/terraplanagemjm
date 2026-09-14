@@ -7,7 +7,8 @@
   <meta name="description" content="J.M. Construtora & Terraplanagem: Engenharia de infraestrutura com maquinário próprio e atendimento em todo o Brasil. Terraplanagem, Muros de Arrimo e Gabião, Drenagem, Asfalto CBUQ e Piscinas.">
   <meta name="keywords" content="J.M. Construtora, terraplanagem, retroescavadeira, muro de arrimo, muro gabiao, drenagem pluvial, pavimentacao asfaltica, fundacoes, demolicoes mecanizadas, construcao de piscinas, maquinas pesadas">
   
-  <!-- CSS Principal -->
+  <!-- CSS Principal (Carrega tanto da raiz quanto da subpasta css/) -->
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="css/styles.css">
   <script>
     // Detector automático inteligente de caminhos de imagens e vídeos (raiz ou pasta img/)
@@ -484,7 +485,7 @@
         <!-- 2. Rolo Compactador -->
         <div class="fleet-card" data-fleet-type="rolos">
           <div class="fleet-img-wrap">
-            <img src="frota-rolo-compactador-jm.jpg" onerror="this.src='servico-asfalto-cbuq.jpg'" alt="Rolo Compactador Vibratório J.M. Terraplanagem & Pavimentação">
+            <img src="servico-asfalto-cbuq.jpg" onerror="this.src='frota-rolo-compactador-jm.jpg'" alt="Rolo Compactador Vibratório J.M. Terraplanagem & Pavimentação">
           </div>
           <div class="fleet-info">
             <span class="fleet-type">Compactação de Base</span>
@@ -503,7 +504,7 @@
         <!-- 3. Caminhões Caçamba Basculante -->
         <div class="fleet-card" data-fleet-type="caminhoes">
           <div class="fleet-img-wrap">
-            <img src="frota-caminhao-basculante-jm.jpg" onerror="this.src='servico-demolicao.jpg'" alt="Caminhão Basculante 6x4 J.M. Terraplanagem">
+            <img src="servico-demolicao.jpg" onerror="this.src='frota-caminhao-basculante-jm.jpg'" alt="Caminhão Basculante 6x4 J.M. Terraplanagem">
           </div>
           <div class="fleet-info">
             <span class="fleet-type">Bota-Fora & Agregados</span>
@@ -1332,7 +1333,12 @@
     </div>
   </div>
 
-  <!-- Script JS Principal -->
-  <script src="js/app.js"></script>
+  <!-- Script JS Principal (Carrega tanto da raiz quanto da pasta js/) -->
+  <script src="app.js"></script>
+  <script>
+    if (!window.openBeforeAfterModal) {
+      document.write('<script src="js/app.js"><\/script>');
+    }
+  </script>
 </body>
 </html>

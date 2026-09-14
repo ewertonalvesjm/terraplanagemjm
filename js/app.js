@@ -70,20 +70,20 @@ const SCENARIOS = {
   gabiao: {
     title: 'Estabilização de Encosta: Muro de Gabião & Drenagem',
     desc: 'Talude de alta declividade com risco de deslizamento transformado em contenção segura em gabião com dreno de brita.',
-    beforeImg: 'https://images.unsplash.com/photo-1541888946425-d0fbb1861593?q=80&w=1200&auto=format&fit=crop', // Solo em obra/escavação
-    afterImg: 'https://images.unsplash.com/photo-1584463699042-3f1a23a31c00?q=80&w=1200&auto=format&fit=crop'   // Obra de pedra/contenção robusta
+    beforeImg: 'img/servico-terraplanagem.jpg',
+    afterImg: 'img/servico-muro-gabiao.jpg'
   },
   loteamento: {
     title: 'Abertura de Vias e Terraplanagem de Loteamento',
     desc: 'Área com vegetação bruta cortada, aterrada e nivelada para implantação de condomínio com drenagem e guias.',
-    beforeImg: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1200&auto=format&fit=crop', // Terreno bruto
-    afterImg: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop'   // Asfalto e vias prontas
+    beforeImg: 'img/servico-terraplanagem.jpg',
+    afterImg: 'img/servico-loteamento.jpg'
   },
   piscina: {
     title: 'Escavação e Construção de Piscina em Desnível',
     desc: 'Solo irregular escavado com mini-escavadeira própria, contenção estrutural e piscina em concreto finalizada.',
-    beforeImg: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop', // Obra inicial
-    afterImg: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=1200&auto=format&fit=crop'   // Piscina de luxo finalizada
+    beforeImg: 'img/servico-fundacoes.jpg',
+    afterImg: 'img/obra-piscina-arrimo-jm.jpg'
   }
 };
 

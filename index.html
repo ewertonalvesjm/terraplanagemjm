@@ -405,14 +405,14 @@
 
       <!-- Wrapper do Slider Interativo -->
       <div class="comparison-wrapper">
-        <div class="comparison-container" id="comparisonBox">
+        <div class="comparison-container" id="comparisonBox" onclick="openBeforeAfterModal()" style="cursor: pointer;" title="Clique para abrir e interagir em tela cheia">
           <!-- Imagem DEPOIS (Fundo) -->
-          <img src="img/servico-muro-gabiao.jpg" id="imgAfter" class="comparison-img" alt="Obra concluída">
+          <img src="servico-muro-gabiao.jpg" onerror="this.src='img/servico-muro-gabiao.jpg'" id="imgAfter" class="comparison-img" alt="Obra concluída">
           <span class="comparison-label label-after">DEPOIS (Concluído)</span>
 
           <!-- Imagem ANTES (Sobreposta com largura controlada) -->
           <div class="comparison-before" id="comparisonBefore">
-            <img src="img/servico-terraplanagem.jpg" id="imgBefore" class="comparison-img" alt="Solo antes da obra">
+            <img src="servico-terraplanagem.jpg" onerror="this.src='img/servico-terraplanagem.jpg'" id="imgBefore" class="comparison-img" alt="Solo antes da obra">
             <span class="comparison-label label-before">ANTES (Início)</span>
           </div>
 
@@ -430,7 +430,12 @@
             <h4 id="scenarioTitle">Estabilização de Encosta: Muro de Gabião & Drenagem</h4>
             <p id="scenarioDesc">Talude de alta declividade com risco de deslizamento transformado em contenção segura em gabião com dreno de brita.</p>
           </div>
-          <a href="#simulador" class="btn btn-gold btn-sm">Quero uma Solução Assim</a>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button type="button" class="btn btn-outline btn-sm" onclick="openBeforeAfterModal()" style="border-color: var(--brand-gold); color: var(--brand-gold);">
+              <span>🔍 Arrastar no Popup (Tela Cheia)</span>
+            </button>
+            <a href="#simulador" class="btn btn-gold btn-sm">Quero uma Solução Assim</a>
+          </div>
         </div>
       </div>
     </div>
@@ -460,7 +465,7 @@
         <!-- 1. Escavadeira Hidráulica -->
         <div class="fleet-card" data-fleet-type="escavadeiras">
           <div class="fleet-img-wrap">
-            <img src="img/frota-escavadeira-jm.jpg" alt="Escavadeira Hidráulica 21 Toneladas com Logo J.M.">
+            <img src="frota-escavadeira-jm.jpg" onerror="this.src='img/frota-escavadeira-jm.jpg'" alt="Escavadeira Hidráulica 21 Toneladas com Logo J.M.">
           </div>
           <div class="fleet-info">
             <span class="fleet-type">Escavação & Demolição</span>
@@ -479,7 +484,7 @@
         <!-- 2. Rolo Compactador -->
         <div class="fleet-card" data-fleet-type="rolos">
           <div class="fleet-img-wrap">
-            <img src="img/frota-rolo-compactador-jm.jpg" alt="Rolo Compactador Vibratório J.M. Terraplanagem & Pavimentação">
+            <img src="frota-rolo-compactador-jm.jpg" onerror="this.src='servico-asfalto-cbuq.jpg'" alt="Rolo Compactador Vibratório J.M. Terraplanagem & Pavimentação">
           </div>
           <div class="fleet-info">
             <span class="fleet-type">Compactação de Base</span>
@@ -498,7 +503,7 @@
         <!-- 3. Caminhões Caçamba Basculante -->
         <div class="fleet-card" data-fleet-type="caminhoes">
           <div class="fleet-img-wrap">
-            <img src="img/frota-caminhao-basculante-jm.jpg" alt="Caminhão Basculante 6x4 J.M. Terraplanagem">
+            <img src="frota-caminhao-basculante-jm.jpg" onerror="this.src='servico-demolicao.jpg'" alt="Caminhão Basculante 6x4 J.M. Terraplanagem">
           </div>
           <div class="fleet-info">
             <span class="fleet-type">Bota-Fora & Agregados</span>
@@ -517,7 +522,7 @@
         <!-- 4. Retroescavadeira -->
         <div class="fleet-card" data-fleet-type="retro">
           <div class="fleet-img-wrap">
-            <img src="img/servico-fundacoes.jpg" alt="Retroescavadeira e Perfuratriz J.M.">
+            <img src="servico-fundacoes.jpg" onerror="this.src='img/servico-fundacoes.jpg'" alt="Retroescavadeira e Perfuratriz J.M.">
           </div>
           <div class="fleet-info">
             <span class="fleet-type">Versatilidade & Drenagem</span>
@@ -1263,6 +1268,65 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.198.534 1.285.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"/></svg>
             <span>Quero um Orçamento para Obra Assim</span>
           </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL POPUP EXCLUSIVO: ANTES & DEPOIS INTERATIVO COM ARRASTE EM TELA CHEIA
+       ========================================================================== -->
+  <div class="modal-overlay" id="beforeAfterModalOverlay">
+    <div class="modal-container modal-container-lg">
+      <button class="modal-close-btn" id="modalCloseBeforeAfterBtn" aria-label="Fechar Modal">✕</button>
+
+      <div class="modal-body" style="padding: 24px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 16px;">
+          <div>
+            <span class="section-tag">Interatividade em Tempo Real</span>
+            <h3 style="margin-bottom: 4px;">Comparador Antes & Depois de Obra</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">👈 Arraste a linha amarela central para os lados para comparar a transformação 👉</p>
+          </div>
+
+          <div class="scenario-pills" style="margin: 0;">
+            <button class="scenario-pill modal-scenario-pill active" data-modal-scenario="gabiao">Contenção em Gabião</button>
+            <button class="scenario-pill modal-scenario-pill" data-modal-scenario="loteamento">Loteamento & Asfalto</button>
+            <button class="scenario-pill modal-scenario-pill" data-modal-scenario="piscina">Piscina & Platô</button>
+          </div>
+        </div>
+
+        <!-- Container do Slider dentro do Popup -->
+        <div class="comparison-container" id="modalComparisonBox" style="height: 480px; border-radius: 12px; border: 1px solid var(--border-gold);">
+          <!-- Imagem DEPOIS -->
+          <img src="servico-muro-gabiao.jpg" onerror="this.src='img/servico-muro-gabiao.jpg'" id="modalImgAfter" class="comparison-img" alt="Obra concluída">
+          <span class="comparison-label label-after">DEPOIS (Concluído)</span>
+
+          <!-- Imagem ANTES -->
+          <div class="comparison-before" id="modalComparisonBefore">
+            <img src="servico-terraplanagem.jpg" onerror="this.src='img/servico-terraplanagem.jpg'" id="modalImgBefore" class="comparison-img" alt="Solo antes da obra">
+            <span class="comparison-label label-before">ANTES (Início)</span>
+          </div>
+
+          <!-- Linha e puxador central -->
+          <div class="comparison-slider-handle" id="modalSliderHandle">
+            <div class="handle-circle">◀ ▶</div>
+          </div>
+
+          <!-- Input Range Invisível para Arraste Físico/Touch -->
+          <input type="range" min="0" max="100" value="50" class="comparison-range-input" id="modalComparisonRange" aria-label="Arraste para comparar antes e depois">
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border-subtle);">
+          <div>
+            <h4 id="modalScenarioTitle" style="color: #fff; margin-bottom: 4px;">Estabilização de Encosta: Muro de Gabião & Drenagem</h4>
+            <p id="modalScenarioDesc" style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">Talude de alta declividade com risco de deslizamento transformado em contenção segura em gabião com dreno de brita.</p>
+          </div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button type="button" class="btn btn-outline" id="modalDismissBeforeAfterBtn">Fechar</button>
+            <a href="https://wa.me/5511976816103?text=Ol%C3%A1!%20Estive%20no%20site%20da%20J.M.%20Construtora%20olhando%20o%20Antes%20e%20Depois%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20uma%20obra%20similar." class="btn btn-gold" target="_blank">
+              <span>Solicitar Orçamento Desta Solução</span> <span>➔</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>

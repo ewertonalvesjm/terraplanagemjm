@@ -532,40 +532,125 @@
       <!-- Filtros da Galeria -->
       <div class="service-tabs">
         <button class="service-tab-btn gallery-tab-btn active" data-gallery-filter="all">Todos os Registros</button>
+        <button class="service-tab-btn gallery-tab-btn" data-gallery-filter="video">🎬 Vídeos das Obras</button>
         <button class="service-tab-btn gallery-tab-btn" data-gallery-filter="maquinas">🚜 Máquinas J.M.</button>
         <button class="service-tab-btn gallery-tab-btn" data-gallery-filter="equipe">👷 Equipe & Engenharia</button>
-        <button class="service-tab-btn gallery-tab-btn" data-gallery-filter="asfalto">🛣️ Pavimentação Asfáltica</button>
+        <button class="service-tab-btn gallery-tab-btn" data-gallery-filter="asfalto">🛣️ Pavimentação & Asfalto</button>
         <button class="service-tab-btn gallery-tab-btn" data-gallery-filter="piscinas">🏊 Piscinas & Contenções</button>
       </div>
 
       <!-- Grade de Cards da Galeria -->
       <div class="gallery-grid">
 
-        <!-- Card 1: Escavadeira J.M. em Operação -->
-        <article class="gallery-card" data-gallery-cat="maquinas">
-          <div class="gallery-thumb-wrap" onclick="openGalleryModal('maquinas', 'Escavadeira 21T J.M. em Movimentação de Terra', 'Operação pesada de corte e carregamento com caminhões basculantes.', 'img/frota-escavadeira-jm.jpg', 'Capacidade: 1.2 m³ por concha • Rendimento: +1.200 m³/dia • Frota Própria', 'Terraplanagem / Escavação')">
-            <span class="gallery-tag-float">🚜 Frota J.M.</span>
-            <img src="img/frota-escavadeira-jm.jpg" alt="Escavadeira 21T J.M. Construtora em operação">
+        <!-- Card 1: Vídeo Real - Maquinário Pesado J.M. em Ação -->
+        <article class="gallery-card" data-gallery-cat="video maquinas">
+          <div class="gallery-thumb-wrap" onclick="openGalleryModal('maquinas', 'Maquinário Pesado J.M. em Plena Operação', 'Registro de operação no canteiro de obras da J.M.: escavadeira hidráulica em carregamento e movimentação contínua de solo com apoio de frota pesada.', 'img/Maquinario.mp4', 'Frota Própria • Escavação Pesada • Operação Contínua', 'Vídeo Operacional / Máquinas')">
+            <span class="gallery-tag-float">🎬 Vídeo da Frota</span>
+            <video muted playsinline preload="metadata" src="img/Maquinario.mp4#t=0.5"></video>
             <div class="video-play-badge">▶</div>
           </div>
           <div class="gallery-card-body">
-            <h4>Escavadeira 21T J.M. em Movimentação de Solo</h4>
+            <h4>Maquinário Pesado J.M. em Operação</h4>
+            <p>Registro real da nossa frota trabalhando no corte, movimentação e carregamento técnico de terra no canteiro de obras.</p>
+            <div class="gallery-spec-pill">
+              <span>Vídeo Real</span>
+              <span>Frota Própria J.M.</span>
+              <span>Operador Especializado</span>
+            </div>
+            <button class="gallery-btn-action" onclick="openGalleryModal('maquinas', 'Maquinário Pesado J.M. em Plena Operação', 'Registro de operação no canteiro de obras da J.M.: escavadeira hidráulica em carregamento e movimentação contínua de solo com apoio de frota pesada.', 'img/Maquinario.mp4', 'Frota Própria • Escavação Pesada • Operação Contínua', 'Vídeo Operacional / Máquinas')">
+              <span>Assistir Vídeo da Operação</span> <span>🎬</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 2: Vídeo Real - Terraplanagem e Regularização de Solo -->
+        <article class="gallery-card" data-gallery-cat="video maquinas">
+          <div class="gallery-thumb-wrap" onclick="openGalleryModal('terraplanagem', 'Terraplanagem & Corte Técnico de Solo', 'Execução de terraplanagem com corte preciso de talude, remoção de material excedente e acerto de perfil topográfico.', 'img/Terraplanagem regularizacao de solo.mp4', 'Corte e Aterro • Alinhamento Topográfico • Bota-fora Técnico', 'Vídeo Operacional / Terraplanagem')">
+            <span class="gallery-tag-float">🎬 Terraplanagem Real</span>
+            <video muted playsinline preload="metadata" src="img/Terraplanagem regularizacao de solo.mp4#t=0.5"></video>
+            <div class="video-play-badge">▶</div>
+          </div>
+          <div class="gallery-card-body">
+            <h4>Terraplanagem & Regularização de Solo</h4>
+            <p>Acompanhe o corte técnico de terreno e transporte de solo com precisão para implantação de platô estrutural.</p>
+            <div class="gallery-spec-pill">
+              <span>Corte e Aterro</span>
+              <span>Nivelamento Técnico</span>
+              <span>Controle Topográfico</span>
+            </div>
+            <button class="gallery-btn-action" onclick="openGalleryModal('terraplanagem', 'Terraplanagem & Corte Técnico de Solo', 'Execução de terraplanagem com corte preciso de talude, remoção de material excedente e acerto de perfil topográfico.', 'img/Terraplanagem regularizacao de solo.mp4', 'Corte e Aterro • Alinhamento Topográfico • Bota-fora Técnico', 'Vídeo Operacional / Terraplanagem')">
+              <span>Assistir Vídeo do Corte</span> <span>🎬</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 3: Vídeo Real - Regularização de Solo -->
+        <article class="gallery-card" data-gallery-cat="video maquinas">
+          <div class="gallery-thumb-wrap" onclick="openGalleryModal('regularizacao', 'Regularização & Nivelamento do Terreno', 'Preparo minucioso do solo, regularização de subleito e homogeneização para recebimento de fundações ou pavimentação.', 'img/Regularizacao de Solo.mp4', 'Nivelamento de Subleito • Grau Zero de Ondulação • Base Firme', 'Vídeo Operacional / Solo')">
+            <span class="gallery-tag-float">🎬 Regularização de Solo</span>
+            <video muted playsinline preload="metadata" src="img/Regularizacao de Solo.mp4#t=0.5"></video>
+            <div class="video-play-badge">▶</div>
+          </div>
+          <div class="gallery-card-body">
+            <h4>Regularização & Nivelamento Fino de Solo</h4>
+            <p>Acerto de cota e espalhamento de solo para garantir suporte estrutural impecável antes do início da construção.</p>
+            <div class="gallery-spec-pill">
+              <span>Subleito Perfeito</span>
+              <span>Sem Desníveis</span>
+              <span>Preparo para Obra</span>
+            </div>
+            <button class="gallery-btn-action" onclick="openGalleryModal('regularizacao', 'Regularização & Nivelamento do Terreno', 'Preparo minucioso do solo, regularização de subleito e homogeneização para recebimento de fundações ou pavimentação.', 'img/Regularizacao de Solo.mp4', 'Nivelamento de Subleito • Grau Zero de Ondulação • Base Firme', 'Vídeo Operacional / Solo')">
+              <span>Assistir Vídeo de Nivelamento</span> <span>🎬</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 4: Vídeo Real - Bloquete e Pavimentação -->
+        <article class="gallery-card" data-gallery-cat="video asfalto">
+          <div class="gallery-thumb-wrap" onclick="openGalleryModal('bloquete', 'Pavimentação Intertravada & Bloquetes', 'Assentamento de blocos intertravados de concreto com perfeito travamento lateral, compactação e alinhamento para condomínios e pátios.', 'img/Bloquete Pavimentacao.mp4', 'Piso Intertravado • Alta Resistência • Drenante e Durável', 'Vídeo Operacional / Pavimentação')">
+            <span class="gallery-tag-float">🎬 Pavimentação com Bloquete</span>
+            <video muted playsinline preload="metadata" src="img/Bloquete Pavimentacao.mp4#t=0.5"></video>
+            <div class="video-play-badge">▶</div>
+          </div>
+          <div class="gallery-card-body">
+            <h4>Pavimentação Intertravada / Bloquete</h4>
+            <p>Execução completa de pavimentação com bloquetes de concreto, garantindo estética nobre, drenagem e durabilidade para tráfego pesado.</p>
+            <div class="gallery-spec-pill">
+              <span>Intertravado</span>
+              <span>Tráfego Intenso</span>
+              <span>Acabamento Premium</span>
+            </div>
+            <button class="gallery-btn-action" onclick="openGalleryModal('bloquete', 'Pavimentação Intertravada & Bloquetes', 'Assentamento de blocos intertravados de concreto com perfeito travamento lateral, compactação e alinhamento para condomínios e pátios.', 'img/Bloquete Pavimentacao.mp4', 'Piso Intertravado • Alta Resistência • Drenante e Durável', 'Vídeo Operacional / Pavimentação')">
+              <span>Assistir Vídeo do Bloquete</span> <span>🎬</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 5: Escavadeira 21T J.M. Oficial -->
+        <article class="gallery-card" data-gallery-cat="maquinas">
+          <div class="gallery-thumb-wrap" onclick="openGalleryModal('maquinas', 'Escavadeira 21T J.M. em Movimentação de Terra', 'Operação pesada de corte e carregamento com caminhões basculantes e identificação oficial da marca.', 'img/frota-escavadeira-jm.jpg', 'Capacidade: 1.2 m³ por concha • Rendimento: +1.200 m³/dia • Frota Própria', 'Terraplanagem / Escavação')">
+            <span class="gallery-tag-float">🚜 Frota Oficial J.M.</span>
+            <img src="img/frota-escavadeira-jm.jpg" alt="Escavadeira 21T J.M. Construtora em operação">
+            <div class="video-play-badge">🔍</div>
+          </div>
+          <div class="gallery-card-body">
+            <h4>Escavadeira Hidráulica 21T com Logo J.M.</h4>
             <p>Corte de terreno e carregamento direto em caminhão basculante com precisão milimétrica e identificação oficial da frota.</p>
             <div class="gallery-spec-pill">
               <span>+12.000m³ Movimentados</span>
               <span>Frota Própria</span>
               <span>Operador Certificado</span>
             </div>
-            <button class="gallery-btn-action" onclick="openGalleryModal('maquinas', 'Escavadeira 21T J.M. em Movimentação de Terra', 'Operação pesada de corte e carregamento com caminhões basculantes.', 'img/frota-escavadeira-jm.jpg', 'Capacidade: 1.2 m³ por concha • Rendimento: +1.200 m³/dia • Frota Própria', 'Terraplanagem / Escavação')">
-              <span>Assistir Vídeo da Operação</span> <span>🎬</span>
+            <button class="gallery-btn-action" onclick="openGalleryModal('maquinas', 'Escavadeira 21T J.M. em Movimentação de Terra', 'Operação pesada de corte e carregamento com caminhões basculantes e identificação oficial da marca.', 'img/frota-escavadeira-jm.jpg', 'Capacidade: 1.2 m³ por concha • Rendimento: +1.200 m³/dia • Frota Própria', 'Terraplanagem / Escavação')">
+              <span>Ver Detalhes da Máquina</span> <span>🔍</span>
             </button>
           </div>
         </article>
 
-        <!-- Card 2: Equipe Técnica Uniformizada J.M. -->
+        <!-- Card 6: Equipe Técnica Uniformizada J.M. -->
         <article class="gallery-card" data-gallery-cat="equipe asfalto">
           <div class="gallery-thumb-wrap" onclick="openGalleryModal('equipe', 'Engenharia e Equipe Técnica com Uniforme J.M.', 'Alinhamento topográfico e conferência de projeto executivo antes da liberação da massa asfáltica.', 'img/equipe-uniforme-jm.jpg', 'Engenheiro Residente • ART Emitida • EPIs Normatizados NR11/NR12', 'Engenharia / Supervisão')">
-            <span class="gallery-tag-float">👷 Equipe & Segurança</span>
+            <span class="gallery-tag-float">👷 Equipe Uniformizada</span>
             <img src="img/equipe-uniforme-jm.jpg" alt="Equipe de engenharia civil da J.M. Construtora no canteiro">
             <div class="video-play-badge">🔍</div>
           </div>
@@ -583,7 +668,7 @@
           </div>
         </article>
 
-        <!-- Card 3: Piscina de Alto Padrão com Muro de Arrimo e Asfalto -->
+        <!-- Card 7: Piscina de Alto Padrão com Muro de Arrimo e Asfalto -->
         <article class="gallery-card" data-gallery-cat="piscinas asfalto">
           <div class="gallery-thumb-wrap" onclick="openGalleryModal('piscinas', 'Piscina Estruturada, Muro de Arrimo e Acesso Asfaltado', 'Solução 360° da J.M.: estabilização do talude em declive com muro de arrimo de pedra, execução da piscina de borda infinita e pavimentação asfáltica do acesso.', 'img/obra-piscina-arrimo-jm.jpg', 'Volume: 75.000 Litros • Estrutura: Concreto Armado • Pavimento: Asfalto CBUQ', 'Construção de Piscina & Contenção')">
             <span class="gallery-tag-float">🏊 Piscinas & Contenção</span>
@@ -604,7 +689,7 @@
           </div>
         </article>
 
-        <!-- Card 4: Pavimentação Asfáltica CBUQ -->
+        <!-- Card 8: Pavimentação Asfáltica CBUQ -->
         <article class="gallery-card" data-gallery-cat="asfalto">
           <div class="gallery-thumb-wrap" onclick="openGalleryModal('asfalto', 'Pavimentação Asfáltica CBUQ a Quente', 'Aplicação de asfalto usinado a quente com acabadora e rolo compactador tandem vibratório em condomínio.', 'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?q=80&w=800&auto=format&fit=crop', 'Área: 4.800 m² • Espessura: 5cm compactado • Tráfego Pesado', 'Pavimentação Asfáltica')">
             <span class="gallery-tag-float">🛣️ Asfalto CBUQ</span>
@@ -621,48 +706,6 @@
             </div>
             <button class="gallery-btn-action" onclick="openGalleryModal('asfalto', 'Pavimentação Asfáltica CBUQ a Quente', 'Aplicação de asfalto usinado a quente com acabadora e rolo compactador tandem vibratório em condomínio.', 'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?q=80&w=800&auto=format&fit=crop', 'Área: 4.800 m² • Espessura: 5cm compactado • Tráfego Pesado', 'Pavimentação Asfáltica')">
               <span>Assistir Vídeo do Asfalto</span> <span>🎬</span>
-            </button>
-          </div>
-        </article>
-
-        <!-- Card 5: Muro de Gabião e Drenagem -->
-        <article class="gallery-card" data-gallery-cat="piscinas">
-          <div class="gallery-thumb-wrap" onclick="openGalleryModal('contencoes', 'Estabilização de Encosta com Muro de Gabião', 'Montagem de caixas metálicas de gabião com enchimento de pedra rachão e canalização de drenos profundos.', 'https://images.unsplash.com/photo-1584463699042-3f1a23a31c00?q=80&w=800&auto=format&fit=crop', 'Extensão: 85 metros lineares • Altura: 4.5m • Drenagem Integrada', 'Contenção Geotécnica')">
-            <span class="gallery-tag-float">🧱 Contenção & Drenagem</span>
-            <img src="https://images.unsplash.com/photo-1584463699042-3f1a23a31c00?q=80&w=600&auto=format&fit=crop" alt="Muro de gabião para contenção de encosta">
-            <div class="video-play-badge">▶</div>
-          </div>
-          <div class="gallery-card-body">
-            <h4>Muro de Gabião & Drenagem Profunda em Talude</h4>
-            <p>Contenção auto-drenante com caixas de malha galvanizada e pedras selecionadas. Resistência máxima contra deslizamentos.</p>
-            <div class="gallery-spec-pill">
-              <span>Auto-Drenante</span>
-              <span>Cálculo Geotécnico</span>
-              <span>Elimina Pressão da Água</span>
-            </div>
-            <button class="gallery-btn-action" onclick="openGalleryModal('contencoes', 'Estabilização de Encosta com Muro de Gabião', 'Montagem de caixas metálicas de gabião com enchimento de pedra rachão e canalização de drenos profundos.', 'https://images.unsplash.com/photo-1584463699042-3f1a23a31c00?q=80&w=800&auto=format&fit=crop', 'Extensão: 85 metros lineares • Altura: 4.5m • Drenagem Integrada', 'Contenção Geotécnica')">
-              <span>Assistir Vídeo da Contenção</span> <span>🎬</span>
-            </button>
-          </div>
-        </article>
-
-        <!-- Card 6: Abertura de Vias e Loteamento -->
-        <article class="gallery-card" data-gallery-cat="asfalto maquinas">
-          <div class="gallery-thumb-wrap" onclick="openGalleryModal('loteamento', 'Abertura de Vias e Terraplanagem de Loteamento', 'Terraplanagem pesada para implantação de loteamento: corte de vias, valas para drenagem pluvial e guias extrusadas.', 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop', 'Extensão: 3.2 km de vias • Guias e Sarjetas • Drenagem Completa', 'Infraestrutura Urbana')">
-            <span class="gallery-tag-float">🛣️ Infraestrutura Urbana</span>
-            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=600&auto=format&fit=crop" alt="Abertura de vias em loteamento">
-            <div class="video-play-badge">▶</div>
-          </div>
-          <div class="gallery-card-body">
-            <h4>Abertura de Ruas & Guias em Loteamento</h4>
-            <p>Arruamento completo com maquinário próprio, nivelamento a laser e galerias celulares pluviais para loteadora.</p>
-            <div class="gallery-spec-pill">
-              <span>Mobilização Pesada</span>
-              <span>Guias e Sarjetas</span>
-              <span>Drenagem Subterrânea</span>
-            </div>
-            <button class="gallery-btn-action" onclick="openGalleryModal('loteamento', 'Abertura de Vias e Terraplanagem de Loteamento', 'Terraplanagem pesada para implantação de loteamento: corte de vias, valas para drenagem pluvial e guias extrusadas.', 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop', 'Extensão: 3.2 km de vias • Guias e Sarjetas • Drenagem Completa', 'Infraestrutura Urbana')">
-              <span>Assistir Vídeo do Arruamento</span> <span>🎬</span>
             </button>
           </div>
         </article>

@@ -435,9 +435,20 @@ function initGalleryModal() {
   const overlay = document.getElementById('galleryModalOverlay');
   const closeBtn = document.getElementById('modalCloseBtn');
   const dismissBtn = document.getElementById('modalDismissBtn');
+  const mediaContainer = document.getElementById('modalMediaContainer');
 
   const closeModal = () => {
     if (overlay) overlay.classList.remove('active');
+    // Pausa e desliga qualquer vídeo em execução para não vazar áudio
+    const activeVideo = document.getElementById('modalActiveVideo');
+    if (activeVideo) {
+      activeVideo.pause();
+      activeVideo.removeAttribute('src');
+      activeVideo.load();
+    }
+    if (mediaContainer) {
+      mediaContainer.innerHTML = '';
+    }
   };
 
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
@@ -457,16 +468,31 @@ function initGalleryModal() {
 }
 
 // Função Global chamada pelos cards para abrir o modal
-window.openGalleryModal = function(cat, title, desc, imgUrl, specs, categoryTag) {
+window.openGalleryModal = function(cat, title, desc, mediaUrl, specs, categoryTag) {
   const overlay = document.getElementById('galleryModalOverlay');
-  const modalImg = document.getElementById('modalImg');
+  const mediaContainer = document.getElementById('modalMediaContainer');
   const modalTitle = document.getElementById('modalTitle');
   const modalDesc = document.getElementById('modalDescription');
   const modalSpecs = document.getElementById('modalSpecsSummary');
   const modalCategory = document.getElementById('modalServiceCategory');
   const modalWhatsapp = document.getElementById('modalWhatsappBtn');
 
-  if (modalImg) modalImg.src = imgUrl;
+  if (mediaContainer) {
+    const isVideo = mediaUrl.toLowerCase().includes('.mp4');
+    if (isVideo) {
+      mediaContainer.innerHTML = `
+        <video id="modalActiveVideo" controls autoplay playsinline style="width:100%; height:100%; max-height:420px; background:#000; object-fit:contain;">
+          <source src="${mediaUrl}" type="video/mp4">
+          Seu navegador não suporta reprodução de vídeo.
+        </video>
+      `;
+    } else {
+      mediaContainer.innerHTML = `
+        <img src="${mediaUrl}" id="modalImg" alt="${title}" style="width:100%; height:100%; object-fit:cover;">
+      `;
+    }
+  }
+
   if (modalTitle) modalTitle.textContent = title;
   if (modalDesc) modalDesc.textContent = desc;
   if (modalSpecs) modalSpecs.textContent = specs;
@@ -474,7 +500,7 @@ window.openGalleryModal = function(cat, title, desc, imgUrl, specs, categoryTag)
 
   if (modalWhatsapp) {
     const phoneNumber = '5511976816103';
-    const textMsg = encodeURIComponent(`Olá, equipe J.M. Construtora! Vi no site a obra "${title}" e gostaria de solicitar um orçamento para um serviço similar na minha propriedade.`);
+    const textMsg = encodeURIComponent(`Olá, equipe J.M. Construtora! Assisti no site o vídeo/registro da obra "${title}" e gostaria de solicitar um orçamento para um serviço similar.`);
     modalWhatsapp.href = `https://wa.me/${phoneNumber}?text=${textMsg}`;
   }
 

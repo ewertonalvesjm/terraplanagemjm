@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initSimulator();
   initFaqAccordion();
   initCounters();
+  initWorksGallery();
+  initGalleryModal();
 });
 
 /* ==========================================================================
@@ -398,3 +400,85 @@ function initCounters() {
     observer.observe(statsSection);
   }
 }
+
+/* ==========================================================================
+   8. FILTRO DA GALERIA DE OBRAS & VÍDEOS
+   ========================================================================== */
+function initWorksGallery() {
+  const galleryBtns = document.querySelectorAll('.gallery-tab-btn');
+  const galleryCards = document.querySelectorAll('.gallery-card');
+
+  galleryBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      galleryBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-gallery-filter');
+
+      galleryCards.forEach(card => {
+        const cat = card.getAttribute('data-gallery-cat') || '';
+        if (filter === 'all' || cat.includes(filter)) {
+          card.style.display = 'flex';
+          card.style.animation = 'fadeIn 0.35s ease';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
+/* ==========================================================================
+   9. MODAL LIGHTBOX INTERATIVO (VÍDEO / FOTO / ORÇAMENTO DIRETO)
+   ========================================================================== */
+function initGalleryModal() {
+  const overlay = document.getElementById('galleryModalOverlay');
+  const closeBtn = document.getElementById('modalCloseBtn');
+  const dismissBtn = document.getElementById('modalDismissBtn');
+
+  const closeModal = () => {
+    if (overlay) overlay.classList.remove('active');
+  };
+
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (dismissBtn) dismissBtn.addEventListener('click', closeModal);
+
+  if (overlay) {
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closeModal();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay && overlay.classList.contains('active')) {
+      closeModal();
+    }
+  });
+}
+
+// Função Global chamada pelos cards para abrir o modal
+window.openGalleryModal = function(cat, title, desc, imgUrl, specs, categoryTag) {
+  const overlay = document.getElementById('galleryModalOverlay');
+  const modalImg = document.getElementById('modalImg');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalDesc = document.getElementById('modalDescription');
+  const modalSpecs = document.getElementById('modalSpecsSummary');
+  const modalCategory = document.getElementById('modalServiceCategory');
+  const modalWhatsapp = document.getElementById('modalWhatsappBtn');
+
+  if (modalImg) modalImg.src = imgUrl;
+  if (modalTitle) modalTitle.textContent = title;
+  if (modalDesc) modalDesc.textContent = desc;
+  if (modalSpecs) modalSpecs.textContent = specs;
+  if (modalCategory) modalCategory.textContent = categoryTag || 'Especialidade J.M. Construtora';
+
+  if (modalWhatsapp) {
+    const phoneNumber = '5511976816103';
+    const textMsg = encodeURIComponent(`Olá, equipe J.M. Construtora! Vi no site a obra "${title}" e gostaria de solicitar um orçamento para um serviço similar na minha propriedade.`);
+    modalWhatsapp.href = `https://wa.me/${phoneNumber}?text=${textMsg}`;
+  }
+
+  if (overlay) {
+    overlay.classList.add('active');
+  }
+};

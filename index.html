@@ -46,6 +46,7 @@
         <ul class="nav-links" id="navLinks">
           <li><a href="#inicio" class="active">Início</a></li>
           <li><a href="#servicos">Especialidades</a></li>
+          <li><a href="#galeria">Galeria & Vídeos</a></li>
           <li><a href="#antes-depois">Antes & Depois</a></li>
           <li><a href="#frota">Nossa Frota</a></li>
           <li><a href="#simulador">Simulador</a></li>
@@ -104,16 +105,16 @@
         </div>
       </div>
 
-      <!-- Card Visual Dinâmico -->
+      <!-- Card Visual Dinâmico com a Frota Oficial J.M. -->
       <div class="hero-visual-card">
         <div class="hero-visual-image">
-          <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1000&auto=format&fit=crop" alt="Escavadeira pesada em operação de terraplanagem">
+          <img src="img/frota-escavadeira-jm.jpg" alt="Escavadeira Hidráulica 21 Toneladas Oficial J.M. Construtora">
           <div class="hero-floating-badge">
             <div class="floating-badge-info">
-              <h4>Prontidão Operacional</h4>
-              <p>Escavadeiras, Rolos, Caminhões e Perfuratrizes</p>
+              <h4>Frota Pesada Própria J.M.</h4>
+              <p>Escavadeiras, Rolos, Basculantes e Retro 4x4</p>
             </div>
-            <a href="#frota" class="btn btn-gold btn-sm">Ver Máquinas</a>
+            <a href="#galeria" class="btn btn-gold btn-sm">Ver Obras em Vídeo</a>
           </div>
         </div>
       </div>
@@ -513,6 +514,159 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GALERIA INTERATIVA DE OBRAS, MÁQUINAS & VÍDEOS OPERACIONAIS DA J.M.
+       ========================================================================== -->
+  <section class="section works-gallery-section" id="galeria">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Registro Real de Obras</span>
+        <h2>Nossa Frota em Ação, Equipe & Projetos Concluídos</h2>
+        <p>Acompanhe o padrão de execução da J.M. Construtora: máquinas com identificação oficial, equipe uniformizada com laudos de engenharia e obras finalizadas em todo o Brasil.</p>
+      </div>
+
+      <!-- Filtros da Galeria -->
+      <div class="service-tabs">
+        <button class="service-tab-btn gallery-tab-btn active" data-gallery-filter="all">Todos os Registros</button>
+        <button class="service-tab-btn gallery-tab-btn" data-gallery-filter="maquinas">🚜 Máquinas J.M.</button>
+        <button class="service-tab-btn gallery-tab-btn" data-gallery-filter="equipe">👷 Equipe & Engenharia</button>
+        <button class="service-tab-btn gallery-tab-btn" data-gallery-filter="asfalto">🛣️ Pavimentação Asfáltica</button>
+        <button class="service-tab-btn gallery-tab-btn" data-gallery-filter="piscinas">🏊 Piscinas & Contenções</button>
+      </div>
+
+      <!-- Grade de Cards da Galeria -->
+      <div class="gallery-grid">
+
+        <!-- Card 1: Escavadeira J.M. em Operação -->
+        <article class="gallery-card" data-gallery-cat="maquinas">
+          <div class="gallery-thumb-wrap" onclick="openGalleryModal('maquinas', 'Escavadeira 21T J.M. em Movimentação de Terra', 'Operação pesada de corte e carregamento com caminhões basculantes.', 'img/frota-escavadeira-jm.jpg', 'Capacidade: 1.2 m³ por concha • Rendimento: +1.200 m³/dia • Frota Própria', 'Terraplanagem / Escavação')">
+            <span class="gallery-tag-float">🚜 Frota J.M.</span>
+            <img src="img/frota-escavadeira-jm.jpg" alt="Escavadeira 21T J.M. Construtora em operação">
+            <div class="video-play-badge">▶</div>
+          </div>
+          <div class="gallery-card-body">
+            <h4>Escavadeira 21T J.M. em Movimentação de Solo</h4>
+            <p>Corte de terreno e carregamento direto em caminhão basculante com precisão milimétrica e identificação oficial da frota.</p>
+            <div class="gallery-spec-pill">
+              <span>+12.000m³ Movimentados</span>
+              <span>Frota Própria</span>
+              <span>Operador Certificado</span>
+            </div>
+            <button class="gallery-btn-action" onclick="openGalleryModal('maquinas', 'Escavadeira 21T J.M. em Movimentação de Terra', 'Operação pesada de corte e carregamento com caminhões basculantes.', 'img/frota-escavadeira-jm.jpg', 'Capacidade: 1.2 m³ por concha • Rendimento: +1.200 m³/dia • Frota Própria', 'Terraplanagem / Escavação')">
+              <span>Assistir Vídeo da Operação</span> <span>🎬</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 2: Equipe Técnica Uniformizada J.M. -->
+        <article class="gallery-card" data-gallery-cat="equipe asfalto">
+          <div class="gallery-thumb-wrap" onclick="openGalleryModal('equipe', 'Engenharia e Equipe Técnica com Uniforme J.M.', 'Alinhamento topográfico e conferência de projeto executivo antes da liberação da massa asfáltica.', 'img/equipe-uniforme-jm.jpg', 'Engenheiro Residente • ART Emitida • EPIs Normatizados NR11/NR12', 'Engenharia / Supervisão')">
+            <span class="gallery-tag-float">👷 Equipe & Segurança</span>
+            <img src="img/equipe-uniforme-jm.jpg" alt="Equipe de engenharia civil da J.M. Construtora no canteiro">
+            <div class="video-play-badge">🔍</div>
+          </div>
+          <div class="gallery-card-body">
+            <h4>Engenharia e Equipe Oficial J.M. no Campo</h4>
+            <p>Responsáveis técnicos uniformizados com EPIs completos, acompanhando o projeto rodoviário e compactação do asfalto com rigor.</p>
+            <div class="gallery-spec-pill">
+              <span>ART de Engenharia</span>
+              <span>Uniforme & EPIs J.M.</span>
+              <span>Supervisão In Loco</span>
+            </div>
+            <button class="gallery-btn-action" onclick="openGalleryModal('equipe', 'Engenharia e Equipe Técnica com Uniforme J.M.', 'Alinhamento topográfico e conferência de projeto executivo antes da liberação da massa asfáltica.', 'img/equipe-uniforme-jm.jpg', 'Engenheiro Residente • ART Emitida • EPIs Normatizados NR11/NR12', 'Engenharia / Supervisão')">
+              <span>Ver Detalhes Técnicos</span> <span>🔍</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 3: Piscina de Alto Padrão com Muro de Arrimo e Asfalto -->
+        <article class="gallery-card" data-gallery-cat="piscinas asfalto">
+          <div class="gallery-thumb-wrap" onclick="openGalleryModal('piscinas', 'Piscina Estruturada, Muro de Arrimo e Acesso Asfaltado', 'Solução 360° da J.M.: estabilização do talude em declive com muro de arrimo de pedra, execução da piscina de borda infinita e pavimentação asfáltica do acesso.', 'img/obra-piscina-arrimo-jm.jpg', 'Volume: 75.000 Litros • Estrutura: Concreto Armado • Pavimento: Asfalto CBUQ', 'Construção de Piscina & Contenção')">
+            <span class="gallery-tag-float">🏊 Piscinas & Contenção</span>
+            <img src="img/obra-piscina-arrimo-jm.jpg" alt="Piscina de luxo e contenção com acesso asfaltado construída pela J.M.">
+            <div class="video-play-badge">🔍</div>
+          </div>
+          <div class="gallery-card-body">
+            <h4>Piscina, Contenção de Encosta & Acesso Asfaltado</h4>
+            <p>Obra completa entregue pela J.M.: corte de platô, muro de arrimo estrutural de pedra, piscina de concreto e via asfaltada.</p>
+            <div class="gallery-spec-pill">
+              <span>Escavação de Precisão</span>
+              <span>Concreto Armado</span>
+              <span>Via de Acesso Asfaltada</span>
+            </div>
+            <button class="gallery-btn-action" onclick="openGalleryModal('piscinas', 'Piscina Estruturada, Muro de Arrimo e Acesso Asfaltado', 'Solução 360° da J.M.: estabilização do talude em declive com muro de arrimo de pedra, execução da piscina de borda infinita e pavimentação asfáltica do acesso.', 'img/obra-piscina-arrimo-jm.jpg', 'Volume: 75.000 Litros • Estrutura: Concreto Armado • Pavimento: Asfalto CBUQ', 'Construção de Piscina & Contenção')">
+              <span>Ver Obra Completa</span> <span>🔍</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 4: Pavimentação Asfáltica CBUQ -->
+        <article class="gallery-card" data-gallery-cat="asfalto">
+          <div class="gallery-thumb-wrap" onclick="openGalleryModal('asfalto', 'Pavimentação Asfáltica CBUQ a Quente', 'Aplicação de asfalto usinado a quente com acabadora e rolo compactador tandem vibratório em condomínio.', 'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?q=80&w=800&auto=format&fit=crop', 'Área: 4.800 m² • Espessura: 5cm compactado • Tráfego Pesado', 'Pavimentação Asfáltica')">
+            <span class="gallery-tag-float">🛣️ Asfalto CBUQ</span>
+            <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?q=80&w=600&auto=format&fit=crop" alt="Pavimentação de asfalto CBUQ com rolo">
+            <div class="video-play-badge">▶</div>
+          </div>
+          <div class="gallery-card-body">
+            <h4>Pavimentação Asfáltica CBUQ em Condomínio</h4>
+            <p>Execução completa: nivelamento de sub-base com bica corrida, imprimação asfáltica e capa de rolamento sem ondulações.</p>
+            <div class="gallery-spec-pill">
+              <span>CBUQ Usinado a Quente</span>
+              <span>Rolo Compactador J.M.</span>
+              <span>Sem Intermediários</span>
+            </div>
+            <button class="gallery-btn-action" onclick="openGalleryModal('asfalto', 'Pavimentação Asfáltica CBUQ a Quente', 'Aplicação de asfalto usinado a quente com acabadora e rolo compactador tandem vibratório em condomínio.', 'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?q=80&w=800&auto=format&fit=crop', 'Área: 4.800 m² • Espessura: 5cm compactado • Tráfego Pesado', 'Pavimentação Asfáltica')">
+              <span>Assistir Vídeo do Asfalto</span> <span>🎬</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 5: Muro de Gabião e Drenagem -->
+        <article class="gallery-card" data-gallery-cat="piscinas">
+          <div class="gallery-thumb-wrap" onclick="openGalleryModal('contencoes', 'Estabilização de Encosta com Muro de Gabião', 'Montagem de caixas metálicas de gabião com enchimento de pedra rachão e canalização de drenos profundos.', 'https://images.unsplash.com/photo-1584463699042-3f1a23a31c00?q=80&w=800&auto=format&fit=crop', 'Extensão: 85 metros lineares • Altura: 4.5m • Drenagem Integrada', 'Contenção Geotécnica')">
+            <span class="gallery-tag-float">🧱 Contenção & Drenagem</span>
+            <img src="https://images.unsplash.com/photo-1584463699042-3f1a23a31c00?q=80&w=600&auto=format&fit=crop" alt="Muro de gabião para contenção de encosta">
+            <div class="video-play-badge">▶</div>
+          </div>
+          <div class="gallery-card-body">
+            <h4>Muro de Gabião & Drenagem Profunda em Talude</h4>
+            <p>Contenção auto-drenante com caixas de malha galvanizada e pedras selecionadas. Resistência máxima contra deslizamentos.</p>
+            <div class="gallery-spec-pill">
+              <span>Auto-Drenante</span>
+              <span>Cálculo Geotécnico</span>
+              <span>Elimina Pressão da Água</span>
+            </div>
+            <button class="gallery-btn-action" onclick="openGalleryModal('contencoes', 'Estabilização de Encosta com Muro de Gabião', 'Montagem de caixas metálicas de gabião com enchimento de pedra rachão e canalização de drenos profundos.', 'https://images.unsplash.com/photo-1584463699042-3f1a23a31c00?q=80&w=800&auto=format&fit=crop', 'Extensão: 85 metros lineares • Altura: 4.5m • Drenagem Integrada', 'Contenção Geotécnica')">
+              <span>Assistir Vídeo da Contenção</span> <span>🎬</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 6: Abertura de Vias e Loteamento -->
+        <article class="gallery-card" data-gallery-cat="asfalto maquinas">
+          <div class="gallery-thumb-wrap" onclick="openGalleryModal('loteamento', 'Abertura de Vias e Terraplanagem de Loteamento', 'Terraplanagem pesada para implantação de loteamento: corte de vias, valas para drenagem pluvial e guias extrusadas.', 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop', 'Extensão: 3.2 km de vias • Guias e Sarjetas • Drenagem Completa', 'Infraestrutura Urbana')">
+            <span class="gallery-tag-float">🛣️ Infraestrutura Urbana</span>
+            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=600&auto=format&fit=crop" alt="Abertura de vias em loteamento">
+            <div class="video-play-badge">▶</div>
+          </div>
+          <div class="gallery-card-body">
+            <h4>Abertura de Ruas & Guias em Loteamento</h4>
+            <p>Arruamento completo com maquinário próprio, nivelamento a laser e galerias celulares pluviais para loteadora.</p>
+            <div class="gallery-spec-pill">
+              <span>Mobilização Pesada</span>
+              <span>Guias e Sarjetas</span>
+              <span>Drenagem Subterrânea</span>
+            </div>
+            <button class="gallery-btn-action" onclick="openGalleryModal('loteamento', 'Abertura de Vias e Terraplanagem de Loteamento', 'Terraplanagem pesada para implantação de loteamento: corte de vias, valas para drenagem pluvial e guias extrusadas.', 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop', 'Extensão: 3.2 km de vias • Guias e Sarjetas • Drenagem Completa', 'Infraestrutura Urbana')">
+              <span>Assistir Vídeo do Arruamento</span> <span>🎬</span>
+            </button>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -942,6 +1096,53 @@
     <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.198.534 1.285.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"/></svg>
     <span>Orçamento Rápido</span>
   </a>
+
+  <!-- ==========================================================================
+       MODAL LIGHTBOX INTERATIVO (VÍDEO / FOTO / DETALHES DE OBRA)
+       ========================================================================== -->
+  <div class="modal-overlay" id="galleryModalOverlay">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Fechar Modal">✕</button>
+      
+      <div class="modal-media-wrap" id="modalMediaContainer">
+        <img src="" id="modalImg" alt="Detalhe da Obra J.M.">
+      </div>
+
+      <div class="modal-body">
+        <span class="section-tag" id="modalServiceCategory">Especialidade J.M.</span>
+        <h3 id="modalTitle">Título da Obra</h3>
+        <p class="modal-subtitle" id="modalSpecsSummary">Especificações Técnicas</p>
+        <p id="modalDescription">Descrição detalhada do projeto executado pela J.M. Construtora.</p>
+
+        <div class="modal-specs-grid">
+          <div class="modal-spec-item">
+            <span>Maquinário Utilizado:</span>
+            <strong id="modalMachineryUsed">Frota Própria J.M.</strong>
+          </div>
+          <div class="modal-spec-item">
+            <span>Responsabilidade:</span>
+            <strong>Engenharia Civil com ART</strong>
+          </div>
+          <div class="modal-spec-item">
+            <span>Atendimento:</span>
+            <strong>Todo o Território Nacional</strong>
+          </div>
+          <div class="modal-spec-item">
+            <span>Agendamento:</span>
+            <strong>Visita Técnica no Local</strong>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-outline" id="modalDismissBtn">Voltar para a Galeria</button>
+          <a href="#" class="btn btn-whatsapp btn-lg" id="modalWhatsappBtn" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.198.534 1.285.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"/></svg>
+            <span>Quero um Orçamento para Obra Assim</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Script JS Principal -->
   <script src="js/app.js"></script>
